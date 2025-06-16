@@ -2,10 +2,10 @@ const mysql = require("mysql");
 const uuid = require("uuid");
 
 const db = mysql.createConnection({
-   host: "localhost",
-   user: "root",
-   password: "password",
-   database: "studentregistrymanagement",
+   host: process.env.MYSQL_HOST,
+   user: process.env.MYSQL_USER,
+   password: process.env.MYSQL_PASSWORD,
+   database: process.env.MYSQL_DATABASE,
 });
 
 exports.registerStudents = async (req, res) => {

@@ -7,7 +7,7 @@ dotenv.config({ path: "./config/config.env" });
 
 const app = express();
 
-const PORT = process.env.PORT;
+const PORT = process.env.MYSQL_PORT;
 
 const middleware = (req, res, next) => {
    req.requestMethod = req.method;
@@ -36,7 +36,7 @@ app.use("/api/v1", routes);
 
 app.listen(PORT, () => {
    console.log(
-      `Server Started on Port ${process.env.PORT} in ${process.env.NODE_ENV} mode`
+      `Server Started on Port ${process.env.MYSQL_PORT} in ${process.env.NODE_ENV} mode`
    );
 });
 
