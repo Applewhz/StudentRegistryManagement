@@ -1,0 +1,28 @@
+{
+   "name": "studentRegistryManagement",
+   "version": "1.0.0",
+   "description": "student registry management system",
+   "main": "app.js",
+   "scripts": {
+      "build": "tsc && npm run copy-sql",
+      "test": "jest",
+      "start": "node app.js",
+      "dev": "nodemon app",
+      "prod": "SET NODE_ENV=production & nodemon app.js",
+      "db:seed": "node ./database/schema/seedData.js",
+      "db:build": "node ./database/schema/tables.js"
+   },
+   "author": "Darren",
+   "license": "ISC",
+   "dependencies": {
+      "cors": "^2.8.5",
+      "dotenv": "^16.3.1",
+      "express": "^4.18.2",
+      "mysql": "^2.18.1",
+      "uuid": "^11.1.0"
+   },
+   "devDependencies": {
+      "jest": "^30.0.0",
+      "nodemon": "^3.1.10"
+   }
+}
