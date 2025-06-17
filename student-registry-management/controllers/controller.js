@@ -10,7 +10,6 @@ const db = mysql.createConnection({
 
 exports.registerStudents = async (req, res) => {
    const { teacher, students } = req.body;
-   console.log(students);
    const registerStudent =
       "INSERT INTO studentregistrymanagement.studentstable (createdAt, updatedAt, id, email, teachersAssigned) VALUES (?,?,?,?,?)";
    if (students.length < 1) {

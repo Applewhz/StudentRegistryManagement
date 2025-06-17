@@ -46,3 +46,5 @@ app.all("*", (req, res) => {
       Message: "Invalid URL",
    });
 });
+
+module.exports = app;
